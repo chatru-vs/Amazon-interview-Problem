@@ -1,0 +1,45 @@
+num_ways(N) = num_ways(N-1) + num_ways(N-2)
+num_ways(0) = 1
+num_ways(1) = 1
+def num_ways(n):
+if n == 0 or n == 1:
+returen 1
+else 
+return num_ways(n-1) + num_ways(n-2)
+def num_ways_bottom_up(n):
+if n == 0 or n == 1: return 1
+nums = new int [n+1]
+nums[0] = 1; nums[1] = 1
+for i from 2 upto n:
+for i from 2 upto n:
+nums[i] = nums[i-1] + nums[i-2]
+return nums[n]
+
+
+def num_ways(n):
+if n == 0 or n == 1: return 1
+return num_ways(n-1) + num_ways(n-2)
+
+def num_ways_X(n)
+if n == 0: return 1
+return num_ways(n-1) + num_ways(n-3)
+                     + num_ways(n-5)
+                        
+def num_way_X(n):
+if n == 0: return 1
+totoal = 0
+for each i in {1, 3, 5}:
+if n - i >=0: total += num_way_X(n - i)
+return total
+
+def num_way_X_bottom_up(n):
+if n == 0: return 1
+nums = new int [n + 1]
+n[0] = 1
+for i from 1 upto n:
+total = 0
+for each j in {1, 3, 5}:
+if i - j >= 0;
+total += nums[i - j]
+nums[i] = total
+return nums[n]
